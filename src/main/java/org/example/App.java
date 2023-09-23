@@ -10,6 +10,7 @@ import io.netty.channel.socket.SocketChannel;
 import io.netty.channel.socket.nio.NioServerSocketChannel;
 import io.netty.channel.socket.nio.NioSocketChannel;
 import lombok.extern.slf4j.Slf4j;
+import org.example.spring.SpringLoader;
 
 
 @Slf4j
@@ -17,10 +18,12 @@ public class App {
     private static final String addr="";
     private static final  Integer port=8888;
     public static void main(String[] args) {
+
         NioEventLoopGroup eventExecutors = new NioEventLoopGroup();
         NioEventLoopGroup eventExecutors1 = new NioEventLoopGroup();
 
         try {
+            SpringLoader.Init();
             StartServer(eventExecutors,eventExecutors1);
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
@@ -30,7 +33,7 @@ public class App {
         ServerBootstrap bootStrap=new ServerBootstrap()
                 .group(boss,work)
                 .channel(NioServerSocketChannel.class)
-                .childHandler(new ServerInitializer());
+                .childHandler(SpringLoader.getBean(ServerInitializer.class));
         Channel channel = bootStrap.bind(addr, port)
                 .sync()
                 .channel();

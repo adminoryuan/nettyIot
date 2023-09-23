@@ -5,14 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ea3806fd-da5e-4120-a0c0-700934dfde81" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/entity/ResponsHeaderFream.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/entity/CmdTypeEnum.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ServerInitializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/ServerInitializer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/codec/HeaderFrameDecoder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/codec/HeaderFrameDecoder.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/codec/HeaderFrameEncoder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/codec/HeaderFrameEncoder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/entity/HeaderFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/entity/RequestHeaderFrame.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/handle/HevingHandle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/handle/HevingHandle.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/process/ProcessFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/process/ProcessFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/process/strategy/ProcessStrategy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/process/strategy/ProcessStrategy.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/process/strategy/PutParcelStrategy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/process/strategy/PutParcelStrategy.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -37,7 +39,9 @@
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
+        <option name="localRepository" value="C:\Users\Administrator\.m2\repository" />
         <option name="mavenHome" value="Use Maven wrapper" />
+        <option name="useMavenConfig" value="true" />
         <option name="userSettingsFile" value="D:\maven\apache-maven-3.8.6\conf\settings.xml" />
       </MavenGeneralSettings>
     </option>
@@ -48,15 +52,18 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "MavenSettings"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;MavenSettings&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.example.App" />
@@ -85,7 +92,9 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1695443930508</updated>
-      <workItem from="1695443932250" duration="9656000" />
+      <workItem from="1695443932250" duration="11313000" />
+      <workItem from="1695462650783" duration="1977000" />
+      <workItem from="1695464965088" duration="1423000" />
     </task>
     <servers />
   </component>
@@ -108,7 +117,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/org/example/App.java</url>
-          <line>15</line>
+          <line>16</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>

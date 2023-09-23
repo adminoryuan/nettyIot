@@ -5,7 +5,12 @@ import io.netty.channel.ChannelHandlerContext;
 import io.netty.handler.codec.MessageToByteEncoder;
 import org.example.entity.ResponsHeaderFream;
 import org.example.utls.CheckSumUtls;
+import org.springframework.beans.factory.config.ConfigurableBeanFactory;
+import org.springframework.context.annotation.Scope;
+import org.springframework.stereotype.Component;
 
+@Component
+@Scope(value = ConfigurableBeanFactory.SCOPE_PROTOTYPE)
 public class HeaderFrameEncoder extends MessageToByteEncoder<ResponsHeaderFream> {
 
     @Override

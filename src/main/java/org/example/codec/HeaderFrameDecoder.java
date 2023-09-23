@@ -5,9 +5,14 @@ import io.netty.channel.ChannelHandlerContext;
 import io.netty.handler.codec.ByteToMessageDecoder;
 import org.example.entity.RequestHeaderFrame;
 import org.example.utls.CheckSumUtls;
+import org.springframework.beans.factory.config.ConfigurableBeanFactory;
+import org.springframework.context.annotation.Scope;
+import org.springframework.stereotype.Component;
 
 import java.util.List;
 
+@Component
+@Scope(value = ConfigurableBeanFactory.SCOPE_PROTOTYPE)
 public class HeaderFrameDecoder extends ByteToMessageDecoder {
     private static final int FRAME_HEADER_LENGTH = 2;
     private static final int FRAME_TYPE_LENGTH = 1;
