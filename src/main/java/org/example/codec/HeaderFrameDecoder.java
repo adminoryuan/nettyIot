@@ -3,7 +3,7 @@ package org.example.codec;
 import io.netty.buffer.ByteBuf;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.handler.codec.ByteToMessageDecoder;
-import org.example.entity.HeaderFrame;
+import org.example.entity.RequestHeaderFrame;
 import org.example.utls.CheckSumUtls;
 
 import java.util.List;
@@ -66,7 +66,7 @@ public class HeaderFrameDecoder extends ByteToMessageDecoder {
         }
 
         // 创建并填充HeaderFrame对象
-        HeaderFrame headerFrame = new HeaderFrame();
+        RequestHeaderFrame headerFrame = new RequestHeaderFrame();
         headerFrame.setFrameType(frameType);
         headerFrame.setDataLength(dataLength);
         headerFrame.setLongitude(longitude);

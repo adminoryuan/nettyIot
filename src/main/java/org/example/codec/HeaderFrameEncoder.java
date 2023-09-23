@@ -3,13 +3,13 @@ package org.example.codec;
 import io.netty.buffer.ByteBuf;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.handler.codec.MessageToByteEncoder;
-import org.example.entity.HeaderFrame;
+import org.example.entity.ResponsHeaderFream;
 import org.example.utls.CheckSumUtls;
 
-public class HeaderFrameEncoder extends MessageToByteEncoder<HeaderFrame> {
+public class HeaderFrameEncoder extends MessageToByteEncoder<ResponsHeaderFream> {
 
     @Override
-    protected void encode(ChannelHandlerContext ctx, HeaderFrame headerFrame, ByteBuf out) throws Exception {
+    protected void encode(ChannelHandlerContext ctx,  ResponsHeaderFream headerFrame, ByteBuf out) throws Exception {
         // 帧头
         out.writeShort(0xAABB);
 
@@ -18,13 +18,6 @@ public class HeaderFrameEncoder extends MessageToByteEncoder<HeaderFrame> {
 
         // 数据长度
         out.writeShort(headerFrame.getDataLength());
-
-        // 经度和纬度
-        out.writeLong(headerFrame.getLongitude());
-        out.writeLong(headerFrame.getLatitude());
-
-        // 柜子编号
-        out.writeBytes(headerFrame.getCabinetId());
 
         // 数据部分
         out.writeBytes(headerFrame.getData());

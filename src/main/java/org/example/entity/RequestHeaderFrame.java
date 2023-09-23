@@ -4,7 +4,7 @@ import lombok.Data;
 import lombok.ToString;
 
 @Data
-public class HeaderFrame  {
+public class RequestHeaderFrame  {
      final byte[] frameHeader = { (byte) 0xAA, (byte) 0xBB };
      byte frameType;
      short dataLength;
