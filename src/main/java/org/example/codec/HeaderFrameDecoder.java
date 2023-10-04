@@ -1,6 +1,8 @@
 package org.example.codec;
 
 import io.netty.buffer.ByteBuf;
+import io.netty.buffer.ByteBufAllocator;
+import io.netty.buffer.ByteBufUtil;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.handler.codec.ByteToMessageDecoder;
 import org.example.entity.RequestHeaderFrame;
@@ -77,10 +79,15 @@ public class HeaderFrameDecoder extends ByteToMessageDecoder {
         headerFrame.setLongitude(longitude);
         headerFrame.setLatitude(latitude);
         headerFrame.setCabinetId(cabinetId);
-        headerFrame.setData(data);
+        headerFrame.setData(ByteArrayToByteBuf(data));
         headerFrame.setChecksum(checksum);
 
         // 将解析后的HeaderFrame对象添加到输出列表
         out.add(headerFrame);
+    }
+    private ByteBuf ByteArrayToByteBuf(byte[] array){
+        ByteBuf buffer = ByteBufAllocator.DEFAULT.buffer();
+        buffer.writeBytes(array);
+        return  buffer;
     }
 }

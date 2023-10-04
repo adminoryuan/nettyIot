@@ -18,11 +18,16 @@ public class MemoryCacheService<K, V> implements CacheService<K, V> {
 
     @Override
     public void put(K key, V value, long ttlSeconds) {
-        cache.put(key, value);
+        put(key,value);
         // 可选：在指定时间后清除缓存项
         if (ttlSeconds > 0) {
             scheduleCacheExpiration(key, ttlSeconds);
         }
+    }
+
+    @Override
+    public void put(K key, V value) {
+        cache.put(key, value);
     }
 
     @Override

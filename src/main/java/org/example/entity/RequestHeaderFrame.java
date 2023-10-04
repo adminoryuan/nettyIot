@@ -1,5 +1,6 @@
 package org.example.entity;
 
+import io.netty.buffer.ByteBuf;
 import lombok.Data;
 import lombok.ToString;
 
@@ -11,7 +12,7 @@ public class RequestHeaderFrame  {
      long longitude;
      long latitude;
      byte[] cabinetId=new byte[16];
-     byte[] data;
+     ByteBuf data;
      int checksum;
 
 
